@@ -3,7 +3,7 @@ from torch import nn
 import torch.nn.functional as F
 
 class NBA_AE(nn.Module):
-    def __init__(self,x_size=23,y_size=20, z_size=10):
+    def __init__(self,x_size=23,y_size=20, z_size=64):
         super(NBA_AE, self).__init__()
         self.x_size = x_size
         self.y_size = y_size
