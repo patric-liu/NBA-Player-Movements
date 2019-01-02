@@ -10,8 +10,9 @@ class GameDataset(Dataset):
         self.in_state = [] # all 2D player states + 3D ball state
         self.out_state = [] # all 2D player states. We dont really care where the ball goes?
         # Get all json files in sub directories
-        files = glob.glob(game_dir+'**/*.json')
+        files = glob.glob(game_dir+'*.json')
         n_games = len(files)
+        print("available games: ", n_games)
         sum_n = 0
         for f in range(start,end):
             # iterate n games
